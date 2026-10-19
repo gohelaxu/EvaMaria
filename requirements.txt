@@ -1,9 +1,10 @@
-﻿pyrogram
+﻿pyrogram==2.0.106
 tgcrypto
-motor
-pymongo[srv]
+motor==3.3.2
+pymongo[srv]==4.6.1
 marshmallow
 umongo
 requests
 aiohttp
 aiofiles
+dnspython
