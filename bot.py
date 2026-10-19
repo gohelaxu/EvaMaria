@@ -1,5 +1,17 @@
 ﻿import asyncio
 try:
+    loop = asyncio.get_event_loop()
+except RuntimeError:
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
+try:
+    import nest_asyncio
+    nest_asyncio.apply()
+except Exception:
+    pass
+import asyncio
+try:
     asyncio.get_event_loop()
 except RuntimeError:
     asyncio.set_event_loop(asyncio.new_event_loop())
@@ -94,4 +106,5 @@ class Bot(Client):
 
 app = Bot()
 app.run()
+
 
